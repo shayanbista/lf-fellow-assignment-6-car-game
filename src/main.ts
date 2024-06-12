@@ -26,7 +26,6 @@ let init = 0;
 let backgroundSpeed = INIT_BACKGROUND_SPEED;
 let animationFrameId: number | undefined;
 
-
 // start game after spacebar is pressed
 function showSplashScreen() {
   ctx.clearRect(0, 0, canvas.width, canvas.height);
@@ -62,8 +61,7 @@ function startGame() {
     updatecar.push(car);
   }
 
-
-// game engine
+  // game engine
   function gameLoop(timestamp: number) {
     if (!lastCarCreationTime) lastCarCreationTime = timestamp;
     const elapsed = timestamp - lastCarCreationTime;
@@ -111,7 +109,7 @@ function startGame() {
     ctx.drawImage(BACK, 0, init - 500, canvas.width, canvas.height);
     ctx.textAlign = "left";
   }
-// repaint the screem
+  //clear current canvas screen
   function clearCanvas() {
     ctx.fillStyle = "black";
     ctx.drawImage(BACK, 0, init, canvas.width, canvas.height);
